@@ -42,6 +42,11 @@ class MainWindow : public QWidget
 /*---------------------------------------------------------------------------*/
 
   using ChartControllerImplPtr = std::unique_ptr< ChartController >;
+    void fillSetupData();
+
+  void getMessageBox( const QString& _text ) const noexcept;
+
+  void drawTable( Defines::Table& _table ) const;
 
 /*---------------------------------------------------------------------------*/
 
@@ -110,6 +115,13 @@ MainWindow::makeChartControllerImpl(
       const Defines::SetupCollPtr& _setup
     , const std::string& _inputStatFilePath
  ) const noexcept
+      std::unique_ptr< ChartController >
+  makeChartControllerImpl(
+        const Defines::SetupCollPtr& _setup
+    ,   const std::string& _inputStatFilePath
+  ) const noexcept;
+
+  auto makeSetupCollectionImpl() const noexcept;
 {
 
     return std::make_unique< ChartController >(
@@ -119,6 +131,18 @@ MainWindow::makeChartControllerImpl(
     );
 
 } // MainWindow::makePhisicalModelImpl
+
+/*---------------------------------------------------------------------------*/
+
+  Ui::MainWindow *ui;
+
+  ChartControllerImplPtr m_controller;
+
+  Defines::SetupCollPtr m_setupColl;
+
+  QString m_statFilePath;
+
+/*---------------------------------------------------------------------------*/
 
 /*---------------------------------------------------------------------------*/
 
