@@ -22,6 +22,25 @@ gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
 
+platforms :jruby do
+  ar_jdbc_version = '~> 1.3'
+  gem 'activerecord-jdbc-adapter', ar_jdbc_version
+  gem 'activerecord-jdbcmysql-adapter', ar_jdbc_version
+  gem 'activerecord-jdbcpostgresql-adapter', ar_jdbc_version
+  gem 'activerecord-jdbcsqlite3-adapter', ar_jdbc_version
+  gem 'jdbc-mysql', :require => false
+  gem 'jdbc-sqlite3', :require => false
+  gem 'jdbc-postgres', :require => false
+
+  gem 'jruby-openssl'
+  gem 'trinidad'
+end
+
+platform :rbx do
+  gem 'rubysl'
+  gem 'rubysl-test-unit', :require => false
+end
+
 platform :ruby do
   gem 'mysql2', '~> 0.3.17'
   gem 'pg', '~> 0.18.1'
@@ -55,6 +74,11 @@ platform :rbx do
   gem 'rubysl'
   gem 'rubysl-test-unit', :require => false
 end
+
+
+gem 'ey_config'
+gem 'rails_autolink'
+gem 'simple_form', '~> 3.1.0'
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
