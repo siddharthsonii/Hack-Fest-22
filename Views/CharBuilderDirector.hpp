@@ -40,6 +40,13 @@ private:
 /*---------------------------------------------------------------------------*/
 
     auto makeBuilderImplPtr( PhisicalModel& _model ) const;
+    
+  using ChartControllerImplPtr = std::unique_ptr< ChartController >;
+    void fillSetupData();
+
+  void getMessageBox( const QString& _text ) const noexcept;
+
+  void drawTable( Defines::Table& _table ) const;
 
 /*---------------------------------------------------------------------------*/
 
@@ -55,6 +62,13 @@ inline auto
 ChartBuilderDirector::makeBuilderImplPtr( PhisicalModel& _model ) const
 {
     return std::make_unique< ChartBuilder >( _model );
+    
+  using ChartControllerImplPtr = std::unique_ptr< ChartController >;
+    void fillSetupData();
+
+  void getMessageBox( const QString& _text ) const noexcept;
+
+  void drawTable( Defines::Table& _table ) const;
 }
 
 #endif // CHARBUILDERDIRECTOR_HPP
