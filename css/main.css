@@ -115,6 +115,13 @@ h1, .h01 {
 	line-height: 1.355;
 	letter-spacing: -.1rem;
 }
+body {
+	background: #151515;
+	font-family: "lora-regular", serif;
+	font-size: 1.7rem;
+	line-height: 3rem;
+	color: #6e6e6e;
+}
 @media only screen and (max-width:600px) {
 	h1, .h01 {
 		font-size: 2.6rem;
@@ -164,6 +171,13 @@ em, i, strong, b {
 	line-height: 3rem;
 	font-style: normal;
 	font-weight: normal;
+}
+body {
+	background: #151515;
+	font-family: "lora-regular", serif;
+	font-size: 1.7rem;
+	line-height: 3rem;
+	color: #6e6e6e;
 }
 em, i {
 	font-family: "lora-italic", serif;
@@ -250,6 +264,13 @@ del {
 abbr[title], dfn[title] {
 	border-bottom: 1px dotted;
 	cursor: help;
+}
+abbr {
+	font-family: "poppins-bold", serif;
+	font-variant: small-caps;
+	text-transform: lowercase;
+	letter-spacing: .05rem;
+	color: #888888;
 }
 mark {
 	background: #FFF49B;
