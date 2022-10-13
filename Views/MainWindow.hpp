@@ -50,6 +50,14 @@ class MainWindow : public QWidget
 
 /*---------------------------------------------------------------------------*/
 
+
+  using ChartControllerImplPtr = std::unique_ptr< ChartController >;
+    void fillSetupData();
+
+  void getMessageBox( const QString& _text ) const noexcept;
+
+  void drawTable( Defines::Table& _table ) const;
+
 public:
 
  /*---------------------------------------------------------------------------*/
