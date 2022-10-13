@@ -44,6 +44,13 @@
 	-o-transition: height 500ms ease-in-out;
 	transition: height 500ms ease-in-out;
 }
+abbr {
+	font-family: "poppins-bold", serif;
+	font-variant: small-caps;
+	text-transform: lowercase;
+	letter-spacing: .05rem;
+	color: #888888;
+}
 .owl-carousel .owl-item {
 	float: left;
 }
@@ -111,6 +118,16 @@
 	-webkit-animation: backSlideIn 1s both ease;
 	-moz-animation: backSlideIn 1s both ease;
 	animation: backSlideIn 1s both ease;
+}
+
+.owl-origin {
+	-webkit-perspective: 1200px;
+	-webkit-perspective-origin-x: 50%;
+	-webkit-perspective-origin-y: 50%;
+	-moz-perspective: 1200px;
+	-moz-perspective-origin-x: 50%;
+	-moz-perspective-origin-y: 50%;
+	perspective: 1200px;
 }
 
 /* goDown */
@@ -404,6 +421,15 @@
 .mfp-align-top .mfp-container:before {
 	display: none;
 }
+.mfp-content {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 auto;
+	text-align: left;
+	z-index: 1045;
+}
+
 .mfp-content {
 	position: relative;
 	display: inline-block;
