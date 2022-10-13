@@ -56,6 +56,36 @@ platform :ruby do
   gem 'racc'
 end
 
+platform :ruby do
+  gem 'mysql2', '~> 0.3.17'
+  gem 'pg', '~> 0.18.1'
+  gem 'activerecord-postgis-adapter', '3.0.0.beta2'
+  gem 'sqlite3'
+
+  gem 'newrelic_rpm', '~> 3.9.9'
+  gem 'unicorn'
+  gem 'puma'
+  gem 'json', '>= 2.0'
+  gem 'minitest'
+  gem 'psych', '~> 2.0.8'
+  gem 'racc'
+end
+
+platform :ruby do
+  gem 'mysql2', '~> 0.3.17'
+  gem 'pg', '~> 0.18.1'
+  gem 'activerecord-postgis-adapter', '3.0.0.beta2'
+  gem 'sqlite3'
+
+  gem 'newrelic_rpm', '~> 3.9.9'
+  gem 'unicorn'
+  gem 'puma'
+  gem 'json', '>= 2.0'
+  gem 'minitest'
+  gem 'psych', '~> 2.0.8'
+  gem 'racc'
+end
+
 platforms :jruby do
   ar_jdbc_version = '~> 1.3'
   gem 'activerecord-jdbc-adapter', ar_jdbc_version
