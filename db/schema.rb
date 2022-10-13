@@ -26,5 +26,35 @@ ActiveRecord::Schema.define(version: 20110613204114) do
     t.datetime "updated_at"
     t.integer  "list_id"
   end
+  
+  
+  create_table "lists", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string   "name"
+    t.boolean  "done"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "list_id"
+  end
+  
+  
+  create_table "lists", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string   "name"
+    t.boolean  "done"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "list_id"
+  end
 
 end
