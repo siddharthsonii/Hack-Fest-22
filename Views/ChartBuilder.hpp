@@ -38,11 +38,24 @@ public:
     QChart* getDiscrepencyChart() const override;
 
     void buildHistohramChart( const Defines::Table& _table );
+    
+  using ChartControllerImplPtr = std::unique_ptr< ChartController >;
+    void fillSetupData();
+
+  void getMessageBox( const QString& _text ) const noexcept;
+
+  void drawTable( Defines::Table& _table ) const;
 
 /*---------------------------------------------------------------------------*/
 
 private:
 
+  using ChartControllerImplPtr = std::unique_ptr< ChartController >;
+    void fillSetupData();
+
+  void getMessageBox( const QString& _text ) const noexcept;
+
+  void drawTable( Defines::Table& _table ) const;
 /*---------------------------------------------------------------------------*/
 
     void buildLineChart( const Defines::ChartData& _data );
