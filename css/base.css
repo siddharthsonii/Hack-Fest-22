@@ -217,6 +217,14 @@ legend {
 	padding: 0;
 }
 
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
 textarea {
 	overflow: auto;
 }
@@ -321,6 +329,12 @@ em,
 i {
 	font-style: italic;
 	line-height: inherit;
+}
+body,
+input,
+button {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
 }
 
 strong,
@@ -462,6 +476,13 @@ textarea {
 .col-nine,
 .col-3-4 {
 	width: 75%;
+}
+
+
+.row:before,
+.row:after {
+	content: "";
+	display: table;
 }
 
 .col-ten,
