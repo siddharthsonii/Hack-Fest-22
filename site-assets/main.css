@@ -47,6 +47,10 @@ a:hover,
 	color: #431919;
 	text-decoration: underline;
 }
+body.learn-page{
+    max-width: 1600px;
+    margin: 0 auto;
+}
 
 p {
 	font-size: 16px;
@@ -76,6 +80,14 @@ header nav a {
 header nav a:not(:last-child) {
 	margin-right: 5px;
 	margin-bottom: 5px;
+}a:hover,
+.link:hover {
+	color: #431919;
+	text-decoration: underline;
+}
+body.learn-page{
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .logo {
