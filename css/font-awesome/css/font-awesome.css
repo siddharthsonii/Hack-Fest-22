@@ -775,6 +775,14 @@
 .fa-sort-desc:before {
   content: "\f0dd";
 }
+.mfp-content {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 auto;
+	text-align: left;
+	z-index: 1045;
+}
 .fa-sort-up:before,
 .fa-sort-asc:before {
   content: "\f0de";
@@ -919,6 +927,17 @@
 }
 .fa-quote-right:before {
   content: "\f10e";
+}.fa-user-md:before {
+  content: "\f0f0";
+}
+.fa-stethoscope:before {
+  content: "\f0f1";
+}
+.fa-suitcase:before {
+  content: "\f0f2";
+}
+.fa-bell-o:before {
+  content: "\f0a2";
 }
 .fa-spinner:before {
   content: "\f110";
@@ -1026,6 +1045,18 @@
 }
 .fa-rocket:before {
   content: "\f135";
+}
+.fa-user-md:before {
+  content: "\f0f0";
+}
+.fa-stethoscope:before {
+  content: "\f0f1";
+}
+.fa-suitcase:before {
+  content: "\f0f2";
+}
+.fa-bell-o:before {
+  content: "\f0a2";
 }
 .fa-maxcdn:before {
   content: "\f136";
