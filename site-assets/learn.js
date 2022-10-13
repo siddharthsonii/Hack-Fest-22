@@ -28,6 +28,24 @@
 			}
 		};
 	}
+	
+	
+	function getFile(file, callback) {
+		if (!location.host) {
+			return console.info('Miss the info bar? Run TodoMVC from a server to avoid a cross-origin error.');
+		}
+
+		var xhr = new XMLHttpRequest();
+
+		xhr.open('GET', findRoot() + file, true);
+		xhr.send();
+
+		xhr.onload = function () {
+			if (xhr.status === 200 && callback) {
+				callback(xhr.responseText);
+			}
+		};
+	}
 
 	function Learn(learnJSON, config) {
 		if (!(this instanceof Learn)) {
@@ -64,6 +82,14 @@
 		this.menuDrawer = document.getElementById('menu-drawer');
 		this.template = template;
 		this.processList();
+		
+		if (typeof learnJSON !== 'object') {
+			try {
+				learnJSON = JSON.parse(learnJSON);
+			} catch (e) {
+				return;
+			}
+		}
 	}
 
 	Learn.prototype.processList = function () {
