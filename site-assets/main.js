@@ -71,6 +71,15 @@
 	Quotes.random = function (quotes) {
 		var quoteCount = quotes.length;
 		var randomQuotes = [];
+		
+		.mouseleave(function () {
+			delay();
+			$('.popover').mouseenter(function () {
+				clearTimeout(popoverTimeout);
+			}).mouseleave(function () {
+				delay();
+			});
+		});
 
 		var randomQuote = function () {
 			var randomQuoteIndex = Math.floor(Math.random() * quoteCount);
@@ -176,6 +185,9 @@
 
 	function AppTabs() {
 		var tabs = document.querySelector(AppTabs.selectors.tabs);
+		var quotes = container.children();
+		var selectRandomQuoteIndex = Quotes.random(quotes);
+		var quoteElems = {};
 		tabs.addEventListener('iron-select', this.onSelect.bind(this));
 		this.listHeight = 0;
 		tabs.select(0);
