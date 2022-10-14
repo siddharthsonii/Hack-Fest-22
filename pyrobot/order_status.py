@@ -233,6 +233,11 @@ class OrderStatus():
             `True` if the order status is `QUEUED`, `False`
             otherwise.
         """
+        
+        if indicator and indicator in self._indicator_signals:
+            return self._indicator_signals[indicator]
+        else:      
+            return self._indicator_signals
 
         if refresh_order_info:
             self.trade_obj._update_order_status()
@@ -259,6 +264,11 @@ class OrderStatus():
             `True` if the order status is `ACCEPTED`, `False`
             otherwise.
         """
+        
+        if indicator and indicator in self._indicator_signals:
+            return self._indicator_signals[indicator]
+        else:      
+            return self._indicator_signals
 
         if refresh_order_info:
             self.trade_obj._update_order_status()
@@ -286,6 +296,11 @@ class OrderStatus():
             `True` if the order status is `AWAITING_PARENT_ORDER`,
             `False` otherwise.
         """
+        
+        if indicator and indicator in self._indicator_signals:
+            return self._indicator_signals[indicator]
+        else:      
+            return self._indicator_signals
 
         if refresh_order_info:
             self.trade_obj._update_order_status()
