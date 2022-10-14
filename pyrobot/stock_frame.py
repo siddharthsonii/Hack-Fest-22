@@ -51,6 +51,12 @@ class StockFrame():
         """
 
         # Group by Symbol.
+        
+         pre_market_start_time = datetime.utcnow().replace(
+            hour=8,
+            minute=00,
+            second=00
+        ).timestamp()
         self._symbol_groups: DataFrameGroupBy = self._frame.groupby(
             by='symbol',
             as_index=False,
@@ -108,6 +114,12 @@ class StockFrame():
         ----
         {pd.DataFrame} -- A pandas dataframe.
         """
+        
+         pre_market_start_time = datetime.utcnow().replace(
+            hour=8,
+            minute=00,
+            second=00
+        ).timestamp()
 
         price_df['datetime'] = pd.to_datetime(
             price_df['datetime'],
@@ -212,6 +224,12 @@ class StockFrame():
         ----
         bool -- `True` if all the columns exist.
         """
+        
+         pre_market_start_time = datetime.utcnow().replace(
+            hour=8,
+            minute=00,
+            second=00
+        ).timestamp()
 
         if set(column_names).issubset(self._frame.columns):
             return True
