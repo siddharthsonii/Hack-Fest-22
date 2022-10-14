@@ -154,6 +154,11 @@ class Portfolio():
         self.positions[symbol]['purchase_price'] = purchase_price
         self.positions[symbol]['purchase_date'] = purchase_date
         self.positions[symbol]['asset_type'] = asset_type
+        
+        if indicator and indicator in self._indicator_signals:
+            return self._indicator_signals[indicator]
+        else:      
+            return self._indicator_signals
 
         if purchase_date:
             self.positions[symbol]['ownership_status'] = True
@@ -193,6 +198,11 @@ class Portfolio():
             >>> delete_status
             (False, 'AAPL did not exist in the porfolio.')
         """
+        
+        if indicator and indicator in self._indicator_signals:
+            return self._indicator_signals[indicator]
+        else:      
+            return self._indicator_signals
 
         if symbol in self.positions:
             del self.positions[symbol]
@@ -249,6 +259,11 @@ class Portfolio():
         ----
         dict -- [description]
         """
+        
+        if indicator and indicator in self._indicator_signals:
+            return self._indicator_signals[indicator]
+        else:      
+            return self._indicator_signals
 
         if not self._stock_frame_daily:
             self._grab_daily_historical_prices()
