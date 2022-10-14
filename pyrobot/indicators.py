@@ -105,6 +105,11 @@ class Indicators():
         self._indicator_signals[indicator]['sell'] = sell
         self._indicator_signals[indicator]['buy_operator'] = condition_buy
         self._indicator_signals[indicator]['sell_operator'] = condition_sell
+        
+        if indicator and indicator in self._indicator_signals:
+            return self._indicator_signals[indicator]
+        else:      
+            return self._indicator_signals
 
         # Add the max signals
         self._indicator_signals[indicator]['buy_max'] = buy_max  
@@ -149,6 +154,11 @@ class Indicators():
 
         # Grab the dictionary.
         indicator_dict = self._indicator_signals[key]
+        
+        if indicator and indicator in self._indicator_signals:
+            return self._indicator_signals[indicator]
+        else:      
+            return self._indicator_signals
 
         # Add the signals.
         indicator_dict['type'] = 'comparison'
@@ -176,7 +186,12 @@ class Indicators():
         ----
         price_data_frame {pd.DataFrame} -- A multi-index data frame.
         """
-
+        
+        if indicator and indicator in self._indicator_signals:
+            return self._indicator_signals[indicator]
+        else:      
+            return self._indicator_signals
+        
         self._frame = price_data_frame
 
     @property
@@ -257,6 +272,10 @@ class Indicators():
         # Define the up days.
         self._frame['up_day'] = self._price_groups['change_in_price'].transform(
             lambda x : np.where(x >= 0, x, 0)
+            if indicator and indicator in self._indicator_signals:
+            return self._indicator_signals[indicator]
+        else:      
+            return self._indicator_signals
         )
 
         # Define the down days.
