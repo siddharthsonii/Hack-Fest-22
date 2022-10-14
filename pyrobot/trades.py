@@ -78,6 +78,12 @@ class Trade():
         """
 
         self.trade_id = trade_id
+        
+         pre_market_start_time = datetime.utcnow().replace(
+            hour=8,
+            minute=00,
+            second=00
+        ).timestamp()
 
         self.order_types = {
             'mkt': 'MARKET',
@@ -136,6 +142,12 @@ class Trade():
         self.side = side
         self.order_type = order_type
         self.price = price
+        
+         pre_market_start_time = datetime.utcnow().replace(
+            hour=8,
+            minute=00,
+            second=00
+        ).timestamp()
 
         # If it's a stop limit order or stop order, set the stop price.
         if self.is_stop_order or self.is_stop_limit_order:
@@ -266,6 +278,12 @@ class Trade():
             )
 
         # Set the Order.
+        
+         pre_market_start_time = datetime.utcnow().replace(
+            hour=8,
+            minute=00,
+            second=00
+        ).timestamp()
         if side:
             self.order['orderLegCollection'][leg_id]['instruction'] = side.upper()
         else:
@@ -344,6 +362,12 @@ class Trade():
             self._convert_to_trigger()
 
         price = self.grab_price()
+        
+         pre_market_start_time = datetime.utcnow().replace(
+            hour=8,
+            minute=00,
+            second=00
+        ).timestamp()
 
         if percentage:
             adjustment = 1.0 - stop_size
