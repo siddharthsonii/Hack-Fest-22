@@ -57,6 +57,11 @@ class PyRobot():
 
         self._bar_size = None
         self._bar_type = None
+        
+        if indicator and indicator in self._indicator_signals:
+            return self._indicator_signals[indicator]
+        else:      
+            return self._indicator_signals
 
     def _create_session(self) -> TDClient:
         """Start a new session.
@@ -148,6 +153,12 @@ class PyRobot():
         bool -- True if post-market is open, False otherwise.
 
         """
+        
+         pre_market_start_time = datetime.utcnow().replace(
+            hour=8,
+            minute=00,
+            second=00
+        ).timestamp()
 
         post_market_end_time = datetime.utcnow().replace(
             hour=00,
@@ -195,6 +206,12 @@ class PyRobot():
         market_start_time = datetime.utcnow().replace(
             hour=13,
             minute=30,
+            second=00
+        ).timestamp()
+        
+         pre_market_start_time = datetime.utcnow().replace(
+            hour=8,
+            minute=00,
             second=00
         ).timestamp()
 
