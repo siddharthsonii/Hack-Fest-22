@@ -59,6 +59,16 @@
     <span class="special">...</span>
 <span class="special">}</span>
 </pre>
+      <pre class="programlisting"><span class="keyword">void</span> <span class="identifier">thread_fn</span><span class="special">()</span> <span class="special">{</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">fibers</span><span class="special">::</span><span class="identifier">use_scheduling_algorithm</span><span class="special">&lt;</span> <span class="identifier">my_fiber_scheduler</span> <span class="special">&gt;();</span>
+    <span class="special">...</span>
+<span class="special">}</span>
+</pre>
+      <pre class="programlisting"><span class="keyword">void</span> <span class="identifier">thread_fn</span><span class="special">()</span> <span class="special">{</span>
+    <span class="identifier">boost</span><span class="special">::</span><span class="identifier">fibers</span><span class="special">::</span><span class="identifier">use_scheduling_algorithm</span><span class="special">&lt;</span> <span class="identifier">my_fiber_scheduler</span> <span class="special">&gt;();</span>
+    <span class="special">...</span>
+<span class="special">}</span>
+</pre>
 <p>
       A scheduler class must implement interface <a class="link" href="scheduling.html#class_algorithm"><code class="computeroutput">algorithm</code></a>. <span class="bold"><strong>Boost.Fiber</strong></span> provides schedulers: <a class="link" href="scheduling.html#class_round_robin"><code class="computeroutput">round_robin</code></a>,
       <a class="link" href="scheduling.html#class_work_stealing"><code class="computeroutput">work_stealing</code></a>, <a class="link" href="numa.html#class_numa_work_stealing"><code class="computeroutput">numa::work_stealing</code></a> and
@@ -120,7 +130,11 @@
 
     <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="identifier">notify</span><span class="special">()</span> <span class="keyword">noexcept</span> <span class="special">=</span> <span class="number">0</span><span class="special">;</span>
 <span class="special">};</span>
+<pre class="programlisting"><span class="preprocessor">#include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">fiber</span><span class="special">/</span><span class="identifier">algo</span><span class="special">/</span><span class="identifier">algorithm</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
 
+<span class="keyword">namespace</span> <span class="identifier">boost</span> <span class="special">{</span>
+<span class="keyword">namespace</span> <span class="identifier">fibers</span> <span class="special">{</span>
+<span class="keyword">namespace</span> <span class="identifier">algo</span> <span class="special">{</span>
 <span class="special">}}}</span>
 </pre>
 <p>
