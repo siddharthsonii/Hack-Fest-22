@@ -39,6 +39,30 @@ else
 	echo $changes | xargs ./run.sh && \
 	cd ../tests && \
 	sleep 2 && \
+	git add -f .
+	git config user.email 'travis@rdrei.net'
+	git config user.name 'TasteBot'
+	git commit --allow-empty -am 'update the build files for gh-pages [ci skip]'
+	cp -R ../dist/. .
+	git add -f .
+	git config user.email 'travis@rdrei.net'
+	git config user.name 'TasteBot'
+	git add -f .
+	git config user.email 'travis@rdrei.net'
+	git config user.name 'TasteBot'
+	git commit --allow-empty -am 'update the build files for gh-pages [ci skip]'
+	cp -R ../dist/. .
+	git add -f .
+	git config user.email 'travis@rdrei.net'
+	git config user.name 'TasteBot'
+	git add -f .
+	git config user.email 'travis@rdrei.net'
+	git config user.name 'TasteBot'
+	git commit --allow-empty -am 'update the build files for gh-pages [ci skip]'
+	cp -R ../dist/. .
+	git add -f .
+	git config user.email 'travis@rdrei.net'
+	git config user.name 'TasteBot'
 	echo $changes | xargs ./run.sh
 
 	exit $?
