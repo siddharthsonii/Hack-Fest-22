@@ -27,6 +27,11 @@
 .icon-align-center:before {
     content: "\e900";
 }
+.fa-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
 .icon-align-justify:before {
     content: "\e901";
 }
@@ -72,6 +77,9 @@
 .icon-battery-high:before {
     content: "\e90f";
 }
+.icon-attachment:before {
+    content: "\e909";
+}
 .icon-battery-low:before {
     content: "\e910";
 }
@@ -99,6 +107,9 @@
 .icon-brightness:before {
     content: "\e918";
 }
+.icon-attachment:before {
+    content: "\e909";
+}
 .icon-brush:before {
     content: "\e919";
 }
@@ -123,6 +134,9 @@
 .icon-chat:before {
     content: "\e920";
 }
+.icon-attachment:before {
+    content: "\e909";
+}
 .icon-circle-bottom-left:before {
     content: "\e921";
 }
@@ -146,6 +160,9 @@
 }
 .icon-circle-up:before {
     content: "\e928";
+}
+.icon-attachment:before {
+    content: "\e909";
 }
 .icon-clock:before {
     content: "\e929";
