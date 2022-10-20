@@ -34,6 +34,10 @@
   }
 }
 
+
+ul.pending-tasks { margin:20px 0; }
+ul.pending-tasks div.boolean { display:inline; }
+
 table.environment-variables {
   word-break: break-all;
 
@@ -41,3 +45,7 @@ table.environment-variables {
     width: 300px;
   }
 }
+
+
+ul.pending-tasks { margin:20px 0; }
+ul.pending-tasks div.boolean { display:inline; }
