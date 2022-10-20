@@ -103,6 +103,10 @@ h1, h2, h3, h4, h5, h6, .h01, .h02, .h03, .h04, .h05, .h06 {
 	text-rendering: optimizeLegibility;
 	margin-bottom: 2.1rem;
 }
+a:hover, a:focus, a:active {
+	color: #FF0077;
+	outline: 0;
+}
 h3, .h03, h4, .h04 {
 	margin-bottom: 1.8rem;
 }
@@ -151,6 +155,11 @@ h6, .h06 {
 	line-height: 1.846;
 	text-transform: uppercase;
 	letter-spacing: .15rem;
+}
+h1, .h01 {
+	font-size: 3.1rem;
+	line-height: 1.355;
+	letter-spacing: -.1rem;
 }
 p img {
 	margin: 0;
