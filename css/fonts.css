@@ -70,6 +70,16 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'lora-italic';
+    src: url('../fonts/lora/lora-italic-webfont.eot');
+    src: url('../fonts/lora/lora-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lora/lora-italic-webfont.woff') format('woff'),
+         url('../fonts/lora/lora-italic-webfont.ttf') format('truetype'),
+         url('../fonts/lora/lora-italic-webfont.svg#loraitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: 'poppins-light';
     src: url('../fonts/poppins/poppins-light-webfont.eot');
     src: url('../fonts/poppins/poppins-light-webfont.eot?#iefix') format('embedded-opentype'),
@@ -87,6 +97,16 @@
          url('../fonts/lora/lora-bold-webfont.woff') format('woff'),
          url('../fonts/lora/lora-bold-webfont.ttf') format('truetype'),
          url('../fonts/lora/lora-bold-webfont.svg#lorabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'lora-italic';
+    src: url('../fonts/lora/lora-italic-webfont.eot');
+    src: url('../fonts/lora/lora-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lora/lora-italic-webfont.woff') format('woff'),
+         url('../fonts/lora/lora-italic-webfont.ttf') format('truetype'),
+         url('../fonts/lora/lora-italic-webfont.svg#loraitalic') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -120,6 +140,16 @@
          url('../fonts/poppins/poppins-semibold-webfont.woff') format('woff'),
          url('../fonts/poppins/poppins-semibold-webfont.ttf') format('truetype'),
          url('../fonts/poppins/poppins-semibold-webfont.svg#poppinssemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'lora-italic';
+    src: url('../fonts/lora/lora-italic-webfont.eot');
+    src: url('../fonts/lora/lora-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lora/lora-italic-webfont.woff') format('woff'),
+         url('../fonts/lora/lora-italic-webfont.ttf') format('truetype'),
+         url('../fonts/lora/lora-italic-webfont.svg#loraitalic') format('svg');
     font-weight: normal;
     font-style: normal;
 }
