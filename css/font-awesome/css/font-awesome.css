@@ -56,6 +56,11 @@
   top: 0.14285714em;
   text-align: center;
 }
+.fa-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
 .fa-li.fa-lg {
   left: -1.85714286em;
 }
@@ -89,6 +94,11 @@
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
   }
+}
+.fa-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
 }
 @keyframes fa-spin {
   0% {
@@ -171,6 +181,11 @@
 }
 .fa-search:before {
   content: "\f002";
+}
+.fa-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
 }
 .fa-envelope-o:before {
   content: "\f003";
@@ -274,6 +289,11 @@
 }
 .fa-volume-off:before {
   content: "\f026";
+}
+.fa-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
 }
 .fa-volume-down:before {
   content: "\f027";
