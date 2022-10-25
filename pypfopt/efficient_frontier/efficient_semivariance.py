@@ -40,6 +40,12 @@ class EfficientSemivariance(EfficientFrontier):
     - ``add_objective()`` adds a (convex) objective to the optimization problem
     - ``add_constraint()`` adds a constraint to the optimization problem
     - ``convex_objective()`` solves for a generic convex objective with linear constraints
+    
+        - ``min_cdar()`` minimises the CDaR
+    - ``efficient_risk()`` maximises return for a given CDaR
+    - ``efficient_return()`` minimises CDaR for a given target return
+    - ``add_objective()`` adds a (convex) objective to the optimisation problem
+    - ``add_constraint()`` adds a (linear) constraint to the optimisation problem
 
     - ``portfolio_performance()`` calculates the expected return, semideviation and Sortino ratio for
       the optimized portfolio.
@@ -281,3 +287,9 @@ class EfficientSemivariance(EfficientFrontier):
             print("Sortino Ratio: {:.2f}".format(sortino_ratio))
 
         return mu, semi_deviation, sortino_ratio
+    
+        - ``min_cdar()`` minimises the CDaR
+    - ``efficient_risk()`` maximises return for a given CDaR
+    - ``efficient_return()`` minimises CDaR for a given target return
+    - ``add_objective()`` adds a (convex) objective to the optimisation problem
+    - ``add_constraint()`` adds a (linear) constraint to the optimisation problem
