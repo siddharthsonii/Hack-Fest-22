@@ -42,6 +42,12 @@ class EfficientCDaR(EfficientFrontier):
     - ``set_weights()`` creates self.weights (np.ndarray) from a weights dict
     - ``clean_weights()`` rounds the weights and clips near-zeros.
     - ``save_weights_to_file()`` saves the weights to csv, json, or txt.
+    
+        - ``min_cdar()`` minimises the CDaR
+    - ``efficient_risk()`` maximises return for a given CDaR
+    - ``efficient_return()`` minimises CDaR for a given target return
+    - ``add_objective()`` adds a (convex) objective to the optimisation problem
+    - ``add_constraint()`` adds a (linear) constraint to the optimisation problem
     """
 
     def __init__(
@@ -234,3 +240,9 @@ class EfficientCDaR(EfficientFrontier):
             print("Conditional Drawdown at Risk: {:.2f}%".format(100 * cdar_val))
 
         return mu, cdar_val
+    
+        - ``min_cdar()`` minimises the CDaR
+    - ``efficient_risk()`` maximises return for a given CDaR
+    - ``efficient_return()`` minimises CDaR for a given target return
+    - ``add_objective()`` adds a (convex) objective to the optimisation problem
+    - ``add_constraint()`` adds a (linear) constraint to the optimisation problem
