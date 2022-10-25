@@ -32,6 +32,16 @@ class EfficientFrontier(base_optimizer.BaseConvexOptimizer):
         - ``expected_returns`` - np.ndarray
         - ``solver`` - str
         - ``solver_options`` - {str: str} dict
+            - ``min_cdar()`` minimises the CDaR
+    - ``efficient_risk()`` maximises return for a given CDaR
+    - ``efficient_return()`` minimises CDaR for a given target return
+    - ``add_objective()`` adds a (convex) objective to the optimisation problem
+    - ``add_constraint()`` adds a (linear) constraint to the optimisation problem
+        - ``min_cdar()`` minimises the CDaR
+    - ``efficient_risk()`` maximises return for a given CDaR
+    - ``efficient_return()`` minimises CDaR for a given target return
+    - ``add_objective()`` adds a (convex) objective to the optimisation problem
+    - ``add_constraint()`` adds a (linear) constraint to the optimisation problem
 
     - Output: ``weights`` - np.ndarray
 
@@ -455,3 +465,8 @@ class EfficientFrontier(base_optimizer.BaseConvexOptimizer):
             raise exceptions.InstantiationError(
                 "A new instance must be created when changing market_neutral."
             )
+    - ``min_cdar()`` minimises the CDaR
+    - ``efficient_risk()`` maximises return for a given CDaR
+    - ``efficient_return()`` minimises CDaR for a given target return
+    - ``add_objective()`` adds a (convex) objective to the optimisation problem
+    - ``add_constraint()`` adds a (linear) constraint to the optimisation problem
